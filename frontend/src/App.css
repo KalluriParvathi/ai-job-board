@@ -1,0 +1,189 @@
+/* ---------- BODY ---------- */
+
+body{
+    margin:0;
+    background:#f4f6f8;
+    font-family:Arial,Helvetica,sans-serif;
+    transition:0.3s;
+}
+
+body.dark{
+    background:#121212;
+    color:white;
+}
+
+/* ---------- CONTAINER ---------- */
+
+.container{
+    width:75%;
+    margin:auto;
+    padding:30px;
+}
+
+/* ---------- HEADINGS ---------- */
+
+h1{
+    text-align:center;
+    color:#222;
+    font-size:52px;
+}
+
+body.dark h1,
+body.dark h2{
+    color:white;
+}
+
+/* ---------- FORM ---------- */
+
+.form{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+    transition:0.3s;
+}
+
+body.dark .form{
+    background:#1e1e1e;
+    box-shadow:0 0 15px rgba(255,255,255,.05);
+}
+
+.form input,
+.form textarea{
+    width:100%;
+    margin:10px 0;
+    padding:12px;
+    font-size:16px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    box-sizing:border-box;
+}
+
+body.dark .form input,
+body.dark .form textarea{
+    background:#2b2b2b;
+    color:white;
+    border:1px solid #555;
+}
+
+body.dark .form input::placeholder,
+body.dark .form textarea::placeholder{
+    color:#bbb;
+}
+
+/* ---------- SEARCH ---------- */
+
+.search{
+    width:100%;
+    margin:25px 0;
+    padding:12px;
+    font-size:16px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    box-sizing:border-box;
+}
+
+body.dark .search{
+    background:#2b2b2b;
+    color:white;
+    border:1px solid #555;
+}
+
+body.dark .search::placeholder{
+    color:#bbb;
+}
+
+/* ---------- BUTTONS ---------- */
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    color:white;
+    background:#2563eb;
+    margin-top:10px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+/* ---------- AI BUTTON ---------- */
+
+.generate-btn{
+    width:100%;
+    background:#27ae60;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+    margin:10px 0;
+}
+
+.generate-btn:hover{
+    background:#1f8a4d;
+}
+
+/* ---------- DELETE BUTTON ---------- */
+
+.delete-btn{
+    background:#dc2626;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.delete-btn:hover{
+    background:#b91c1c;
+}
+
+/* ---------- JOB CARD ---------- */
+
+.job-card,
+.card{
+    background:white;
+    margin-top:20px;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+body.dark .job-card,
+body.dark .card{
+    background:#1e1e1e;
+    color:white;
+    box-shadow:0 0 15px rgba(255,255,255,.05);
+}
+
+.job-card h3,
+.card h3{
+    color:#2563eb;
+}
+
+body.dark .job-card h3,
+body.dark .card h3{
+    color:#60a5fa;
+}
+
+/* ---------- SCROLLBAR ---------- */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#888;
+    border-radius:10px;
+}
+
+body.dark::-webkit-scrollbar-thumb{
+    background:#555;
+}
