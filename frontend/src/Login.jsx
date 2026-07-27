@@ -31,7 +31,7 @@ function Login() {
 
     try {
       const res = await axios.post(
-        "http://127.0.0.1:8000/login",
+        "https://ai-job-board-jq0f.onrender.com/login",
         form
       );
 

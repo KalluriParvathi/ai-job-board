@@ -18,7 +18,7 @@ function ForgotPassword() {
     try {
 
       await axios.put(
-        "http://127.0.0.1:8000/forgot-password",
+        "https://ai-job-board-jq0f.onrender.com/forgot-password",
         form
       );
 

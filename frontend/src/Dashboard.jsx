@@ -24,7 +24,7 @@ function Dashboard() {
 
   // Load Jobs
   const fetchJobs = async () => {
-    const res = await axios.get("http://127.0.0.1:8000/jobs");
+    const res = await axios.get("https://ai-job-board-jq0f.onrender.com/jobs");
     setJobs(res.data);
   };
 
@@ -55,12 +55,12 @@ function Dashboard() {
 
     if (editingId) {
       await axios.put(
-        `http://127.0.0.1:8000/jobs/${editingId}`,
+        `https://ai-job-board-jq0f.onrender.com/jobs/${editingId}`,
         form
       );
       setEditingId(null);
     } else {
-      await axios.post("http://127.0.0.1:8000/jobs", form);
+      await axios.post("https://ai-job-board-jq0f.onrender.com/jobs", form);
     }
 
     setForm({
@@ -75,7 +75,7 @@ function Dashboard() {
 
   // Delete Job
   const deleteJob = async (id) => {
-    await axios.delete(`http://127.0.0.1:8000/jobs/${id}`);
+    await axios.delete(`https://ai-job-board-jq0f.onrender.com/jobs/${id}`);
     fetchJobs();
   };
 
@@ -105,7 +105,7 @@ function Dashboard() {
 
     try {
       const res = await axios.get(
-        `http://127.0.0.1:8000/generate/${encodeURIComponent(
+        `https://ai-job-board-jq0f.onrender.com/generate/${encodeURIComponent(
           form.title
         )}`
       );
