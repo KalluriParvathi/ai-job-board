@@ -1,25 +1,10 @@
 from pydantic import BaseModel, ConfigDict
 
 
-# -----------------------------
-# Job Schemas
-# -----------------------------
-class JobCreate(BaseModel):
-    title: str
-    company: str
-    location: str
-    description: str
-
-
-class JobResponse(JobCreate):
-    id: int
-
-    model_config = ConfigDict(from_attributes=True)
-
-
-# -----------------------------
+# -------------------------
 # User Schemas
-# -----------------------------
+# -------------------------
+
 class UserCreate(BaseModel):
     username: str
     email: str
@@ -37,7 +22,25 @@ class UserResponse(BaseModel):
     email: str
 
     model_config = ConfigDict(from_attributes=True)
-    
+
+
 class ForgotPassword(BaseModel):
     email: str
     new_password: str
+
+
+# -------------------------
+# Job Schemas
+# -------------------------
+
+class JobCreate(BaseModel):
+    title: str
+    company: str
+    location: str
+    description: str
+
+
+class JobResponse(JobCreate):
+    id: int
+
+    model_config = ConfigDict(from_attributes=True)

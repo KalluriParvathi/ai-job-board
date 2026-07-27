@@ -1,28 +1,14 @@
-def generate_job_description(title):
+def generate_job_description(title: str):
     return f"""
-Job Title: {title}
+We are looking for a talented {title} to join our team.
 
 Responsibilities:
-- Develop and maintain applications.
-- Collaborate with cross-functional teams.
-- Write clean and maintainable code.
-- Debug and optimize software.
+- Develop and maintain software.
+- Collaborate with team members.
+- Solve technical problems.
 
-Skills:
-- Python
-- FastAPI
-- SQL
-- REST APIs
-- Git
-
-Qualifications:
-- Bachelor's degree in Computer Science or related field.
-- Good problem-solving skills.
-- Strong communication skills.
-
-Benefits:
-- Competitive salary
-- Health insurance
-- Flexible work environment
-- Learning opportunities
+Requirements:
+- Good knowledge of Python.
+- Good communication skills.
+- Ability to learn quickly.
 """
