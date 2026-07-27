@@ -23,15 +23,38 @@ function Dashboard() {
   const [search, setSearch] = useState("");
 
   // Load Jobs
-  const fetchJobs = async () => {
-    const res = await axios.get("https://ai-job-board-jq0f.onrender.com/jobs");
+  // Load Jobs
+const fetchJobs = async () => {
+  try {
+    console.log("Fetching jobs from backend...");
+
+    const res = await axios.get(
+      "https://ai-job-board-jq0f.onrender.com/jobs"
+    );
+
+    console.log("API Response:", res);
+    console.log("Jobs Data:", res.data);
+
     setJobs(res.data);
-  };
+  } catch (err) {
+    console.error("Error fetching jobs:", err);
 
-  useEffect(() => {
-    fetchJobs();
-  }, []);
+    if (err.response) {
+      console.log("Status:", err.response.status);
+      console.log("Response:", err.response.data);
+    }
 
+    alert("Unable to load jobs.");
+  }
+};
+
+useEffect(() => {
+  fetchJobs();
+}, []);
+
+useEffect(() => {
+  console.log("Current Jobs State:", jobs);
+}, [jobs]);
   // Dark Mode
   useEffect(() => {
     if (darkMode) {
