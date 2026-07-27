@@ -32,9 +32,9 @@ function Register() {
 
     try {
       await axios.post(
-        "http://127.0.0.1:8000/register",
+        "https://ai-job-board-jq0f.onrender.com/register",
         form
-      );
+    );
 
       alert("Registration Successful!");
 
