@@ -32,6 +32,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
+        "http://localhost:5174",
         "https://ai-job-board-ten.vercel.app",
     ],
     allow_credentials=True,
